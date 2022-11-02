@@ -42,20 +42,10 @@
 --space-150: 1.5rem;
 --space-200: 2rem;
 --space-250: 2.5rem;
---space-300:3rem;
+--space-300: 3rem;
 --space-350: 3.5rem;
 --space-400: 4rem;
 
-}
-
-@media (min-width: 50em) {
-    :root {
-        --fs-body: var(--fs-400);
-        --fs-button: var(--fs-600);
-        --fs-primary-h: var(--fs-900);
-        --fs-secondary-h: var(--fs-800);
-        --fs-tertiary-h: var(--fs-600);
-    }
 }
 
 /* Utility classes */
@@ -109,51 +99,6 @@
     gap: 2rem;
 }
 
-@media (min-width: 500px) {
-    .container {
-        --max-width: 1110px;
-        padding: 1rem;
-        width: min(var(--max-width), 100% - var(--padding) * 2);
-        margin-inline: auto;
-        margin: 7em;
-    }
-
-    .even-columns {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
-
-    .display-card {
-        width: 100%;
-        min-height: 22.5em;
-        margin: auto;
-        border-radius: 5px;
-        position: relative;
-        text-align: center;
-        box-shadow: 2px 2px 2px var(--clr-black50);
-        transition: 0.3s;
-    }
-
-    .display-card img {
-        width: 100%;
-        height: 10em;
-        object-fit: cover;
-        position: relative;
-        border-radius: 5px 5px 0px 0px;
-    }
-    
-    .display-card i {
-        width: 50px;
-        height: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        transform: translateY(-60%);
-        border-radius: 50%;
-        display: grid;
-        align-items: center;
-    }
-}
-
 body {
     font-size: var(--fs-body);
     font-family: var(--ff-body);
@@ -182,15 +127,7 @@ header, footer {
     text-align: end;
 }
 
-.showcase {
-    height: 20em;
-    background-image: linear-gradient(to bottom, var(--clr-primary10), var(--clr-primary)), url(images/vr.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 70%;
-}
-
-.top-nav nav {
+.top-nav nav, label, .display-card p, .display-card a {
     display: none;
 }
 
@@ -233,19 +170,19 @@ header, footer {
     overflow: hidden;
 }
 
-.icon-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
 .display-card i {
     margin-top: auto;
     margin-bottom: auto;
     transform: translateX(-50%);
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .display-card:hover, button:hover {
@@ -289,10 +226,6 @@ input::placeholder {
     color: #00000050;
 }
 
-label {
-    display: none;
-}
-
 button {
     border: none;
     text-align: center;
@@ -301,4 +234,56 @@ button {
     width: 100%;
     box-shadow: 2px 2px 2px var(--clr-black50);
     transition: 0.3s;
+}
+
+
+
+
+@media (min-width: 500px) {
+    :root {
+        --fs-body: var(--fs-400);
+        --fs-button: var(--fs-600);
+        --fs-primary-h: var(--fs-900);
+        --fs-secondary-h: var(--fs-800);
+        --fs-tertiary-h: var(--fs-600);
+    }
+    
+    .container {
+        --max-width: 1110px;
+        padding: 1rem;
+        width: min(var(--max-width), 100% - var(--padding) * 2);
+        margin-inline: auto;
+        margin: 7em;
+    }
+
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .display-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: 20em;
+        margin: auto;
+    }
+
+    .display-card img {
+        width: 100%;
+        height: 10em;
+        object-fit: cover;
+        position: relative;
+        border-radius: 5px 5px 0px 0px;
+    }
+    
+    .display-card i {
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-60%);
+        border-radius: 50%;
+        display: grid;
+        align-items: center;
+    }
 }

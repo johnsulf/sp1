@@ -161,8 +161,9 @@ header, footer {
 
 .top-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: end;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    justify-content: space-between;
 }
 
 .top-nav nav, label, .display-card p, .display-card a {
@@ -184,6 +185,10 @@ header {
     isolation: isolate;
 }
 
+header h1 {
+    max-width: 8em;
+}
+
 header::before {
     content: '';
     position: absolute;
@@ -192,7 +197,7 @@ header::before {
     background-image: linear-gradient(180deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 90% 100%), url(images/vr.jpg);
     opacity: 0.4;
     background-size: cover;
-    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
 }
 
 .display-info {
@@ -213,7 +218,7 @@ header::before {
 
 .display-card img {
     width: 100%;
-    height: 100%;
+    height: 5em;
     object-fit: cover;
     position: relative;
     border-radius: 5px 0px 0px 5px;
@@ -223,9 +228,6 @@ header::before {
     margin-top: auto;
     margin-bottom: auto;
     transform: translateX(-50%);
-}
-
-.icon-circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,6 +254,15 @@ header::before {
     grid-auto-flow: column;
     justify-content: space-between;
     padding: 0 var(--size-200);
+}
+
+.social-links i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .footer-nav {
@@ -284,7 +295,7 @@ button {
     transition: 0.3s;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     :root {
         --fs-body: var(--fs-400);
         --fs-button: var(--fs-600);
@@ -298,15 +309,22 @@ button {
         margin: auto;
     }
 
+    .reverse {
+        order: 1;
+    }
+
     .even-columns {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
-
     .top-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .top-nav nav {
         display: grid;
-        grid-template-columns: 1fr 4fr;
-        justify-content: space-evenly;
+        grid-auto-flow: column;
+        justify-content: space-between;
     }
 
     .top-nav a {
@@ -334,21 +352,14 @@ button {
         grid-template-columns: 1fr;
     }
 
-    .top-nav nav, .display-card p, .display-card a {
-        display: inline-block;
+    .display-card p, .display-card a {
+        display: block;
     }
 
     header::before {
         background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/vr.jpg);
-        opacity: 0.4;
-        background-size: cover;
-        max-width: 40em;
         margin: auto;
-        background-position: top 600px bottom 600px;
-    }
-
-    header h1 {
-        max-width: 8em;
+        height: 100%;
     }
 
     .display-info {
@@ -368,7 +379,7 @@ button {
     }
 
     .display-card img {
-        aspect-ratio: 1/0.5;
+        height: 8em;
         object-fit: cover;
         border-radius: 5px 5px 0px 0px;
     }
@@ -386,4 +397,5 @@ button {
     .display-card i:last-of-type {
         display: none;
     }
+    
 }

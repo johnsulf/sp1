@@ -189,7 +189,7 @@ header h1 {
     max-width: 8em;
 }
 
-header::before {
+.home::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -198,6 +198,20 @@ header::before {
     opacity: 0.4;
     background-size: cover;
     aspect-ratio: 1/1;
+}
+
+.visit::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%), url(images/museum.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
 }
 
 .display-info {
@@ -296,6 +310,15 @@ button {
     transition: 0.3s;
 }
 
+.visit-info {
+    text-align: center;
+}
+
+.visit-info p {
+    width: 10em;
+    margin: auto;
+}
+
 @media (min-width: 800px) {
     :root {
         --fs-body: var(--fs-400);
@@ -357,10 +380,17 @@ button {
         display: block;
     }
 
-    header::before {
+    .home::before {
         background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/vr.jpg);
         margin: auto;
         height: 100%;
+    }
+
+    .visit::before {
+        background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/museum.jpg);
+    height: 100%;
+    width: 50%;
+    margin: auto;
     }
 
     .display-info {
@@ -406,5 +436,10 @@ button {
     .footer-flex {
         display: grid;
         grid-auto-flow: column;
+    }
+
+    .visit-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr
     }
 }

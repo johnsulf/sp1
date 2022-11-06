@@ -189,9 +189,10 @@ header::before {
     position: absolute;
     z-index: -1;
     inset: 0;
-    background-image: linear-gradient(to top, var(--clr-primary), var(--clr-primary10)), url(images/vr.jpg);
+    background-image: linear-gradient(180deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 90% 100%), url(images/vr.jpg);
     opacity: 0.4;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .display-info {
@@ -320,8 +321,17 @@ button {
         display: none;
     }
 
-    .header-info {
+    .header-info-container {
+        display: flex;
         justify-content: end;
+        max-width: 1000px;
+        margin: auto;
+
+    }
+
+    .header-info-flex {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .top-nav nav, .display-card p, .display-card a {
@@ -329,16 +339,16 @@ button {
     }
 
     header::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        background-image: url(images/vr.jpg);
+        background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/vr.jpg);
         opacity: 0.4;
         background-size: cover;
         max-width: 40em;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
+        background-position: top 600px bottom 600px;
+    }
+
+    header h1 {
+        max-width: 8em;
     }
 
     .display-info {

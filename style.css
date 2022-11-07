@@ -150,13 +150,8 @@ h1, h2, h3, button, a, p {
 
 
 header, footer {
-    background-color: var(--clr-primary);
     margin: 0;
     padding: var(--size-100);
-}
-
-.exhibitions {
-    background-color: var(--clr-secondary);
 }
 
 .container {
@@ -328,13 +323,30 @@ button {
     transition: 0.3s;
 }
 
-.visit-info {
+.visit-info, .customer-reviews {
     text-align: center;
+    padding: var(--size-100);
 }
 
 .visit-info p {
-    width: 10em;
+    width: 12em;
     margin: auto;
+}
+
+.customer-reviews {
+    margin-top: var(--size-200);
+}
+
+.customer-reviews img {
+    object-fit: cover;
+    transform: translateY(-60%);
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+
+.customer-reviews div {
+    transform: translateY(-60%);
 }
 
 @media (min-width: 800px) {

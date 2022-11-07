@@ -12,7 +12,7 @@
     <title>Community Science Museum | Exhibitions</title>
 </head>
 <body>
-    <header class="exhibitions">
+    <header class="exhibitions | bg-secondary">
         <section class="container">
             <div class="top-nav">
                 <a href="index.html"><img class="logo" src="images/logo_reverse.png" alt="Community Science Museum Logo"></a>
@@ -76,9 +76,14 @@
                 </div>
             </div>
         </section>
-
-        /* customer review */
-
+        <section class="customer-reviews | bg-primary10">
+            <img src="images/girl.jpg" alt="Picture of the girl who delivered the review.">
+            <div>
+                <h2 class="fs-tertiary-h margin-block-50">Emma</h2>
+                <p class="text-secondary fs-body margin-block-50">9 years</p>
+                <p class="fs-body margin-block-50">“I really loved the Darwin exhibit! So cool to see all those strange creatures.”</p>
+            </div>
+        </section>
         <section class="container">
             <div class="even-columns margin-block-200">
                 <div class="display-info">
@@ -150,31 +155,36 @@
                 </div>
             </div>
         </section>
-
-        /* customer review */
-
+        <section class="customer-reviews | bg-primary10 margin-block-200">
+            <img src="images/boy.jpg" alt="Picture of the boy who delivered the review.">
+            <div>
+                <h2 class="fs-tertiary-h margin-block-50">Damien</h2>
+                <p class="text-secondary fs-body margin-block-50">15 years</p>
+                <p class="fs-body margin-block-50">“Seeing the Waste Hill exhibit really made me think about what we are doing to.”</p>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="bg-secondary">
         <section class="container">
-            <h2 class="fs-tertiary-h fw-bold margin-block-100">Subscribe to our newsletter</h2>
+            <h2 class="fs-tertiary-h fw-bold text-white margin-block-100">Subscribe to our newsletter</h2>
             <div class="footer-flex">
                 <form action="email" method="post">
                     <input class="fs-body" type="email" name="email" id="email" placeholder="email adress">
                     <label for="email">email adress</label>
-                    <button class="small-button | bg-secondary text-white fs-body" type="submit">Subscribe</button>
+                    <button class="small-button | bg-primary fs-body" type="submit">Subscribe</button>
                 </form>
                 <div class="social-links">
-                    <i class="icon-circle | fa-brands fa-facebook text-white bg-secondary fs-body"></i>
-                    <i class="icon-circle | fa-brands fa-twitter text-white bg-secondary fs-body"></i>
-                    <i class="icon-circle | fa-brands fa-instagram text-white bg-secondary fs-body"></i>
-                    <i class="icon-circle | fa-brands fa-google text-white bg-secondary fs-body"></i>
+                    <i class="icon-circle | fa-brands fa-facebook bg-primary fs-body"></i>
+                    <i class="icon-circle | fa-brands fa-twitter bg-primary fs-body"></i>
+                    <i class="icon-circle | fa-brands fa-instagram bg-primary fs-body"></i>
+                    <i class="icon-circle | fa-brands fa-google bg-primary fs-body"></i>
                 </div>
             </div>
             <nav class="footer-nav margin-block-200">
-                <a class="fs-body fw-bold text-secondary" href="exhibitions.html">Exhibitions</a>
-                <a class="fs-body fw-bold text-secondary" href="events.html">Events</a>
-                <a class="fs-body fw-bold text-secondary" href="visit.html">Visit</a>
-                <a class="fs-body fw-bold text-secondary" href="get_involved.html">Get involved</a>
+                <a class="fs-body fw-bold text-primary" href="exhibitions.html">Exhibitions</a>
+                <a class="fs-body fw-bold text-primary" href="events.html">Events</a>
+                <a class="fs-body fw-bold text-primary" href="visit.html">Visit</a>
+                <a class="fs-body fw-bold text-primary" href="get_involved.html">Get involved</a>
             </nav>
         </section>
     </footer>

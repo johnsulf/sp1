@@ -1,10 +1,13 @@
+
+/* VARIABLES/CONSTANTS */
+
 :root {
-/* Colors */
+/* colors */
     --clr-primary: #FDD700;
     --clr-secondary: #0000C8;
     --clr-tertiary: #C5003C;
 
-    --clr-primary10: #fdd70020;
+    --clr-primary10: #fdd70010;
     --clr-secondary10: #0000C810;
     --clr-tertiary10: #C5003C10;
 
@@ -13,51 +16,44 @@
     --clr-black: #000;
     --clr-black50: #00000050;
 
-/* Typography */
---ff-primary: 'Quicksand', sans-serif;
+/* typography */
+    --ff-primary: 'Quicksand', sans-serif;
 
---ff-body: var(--ff-primary);
---ff-heading: var(--ff-primary);
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
 
---fw-regular: 400;
---fw-semi-bold: 600;
---fw-bold: 700;
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+    --fs-700: 2.25rem;
+    --fs-800: 3rem;
+    --fs-900: 4.5rem;
 
---fs-300: 1rem;
---fs-400: 1.25rem;
---fs-500: 1.5rem;
---fs-600: 2rem;
---fs-700: 2.25rem;
---fs-800: 3rem;
---fs-900: 4.5rem;
+    --fs-body: var(--fs-300);
+    --fs-primary-h: var(--fs-800);
+    --fs-secondary-h: var(--fs-700);
+    --fs-tertiary-h: var(--fs-500);
 
---fs-body: var(--fs-300);
---fs-button: var(--fs-500);
---fs-primary-h: var(--fs-800);
---fs-secondary-h: var(--fs-700);
---fs-tertiary-h: var(--fs-500);
-
---size-50: .5rem;
---size-100: 1rem;
---size-150: 1.5rem;
---size-200: 2rem;
---size-250: 2.5rem;
---size-300: 3rem;
---size-350: 3.5rem;
---size-400: 4rem;
-
+/* sizes */
+    --size-50: .5rem;
+    --size-100: 1rem;
+    --size-150: 1.5rem;
+    --size-200: 2rem;
+    --size-250: 2.5rem;
+    --size-300: 3rem;
+    --size-350: 3.5rem;
+    --size-400: 4rem;
 }
 
-/* Utility classes */
+/* UTILITY CLASSES */
 
 /* text */
-.text-black { color: var(--clr-black); }
 .text-white { color: var(--clr-white); }
 .text-primary { color: var(--clr-primary); }
 .text-secondary { color: var(--clr-secondary); }
 .text-tertiary { color: var(--clr-tertiary); }
 
-.fw-regular{ font-weight: var(--fw-regular); }
 .fw-semi-bold { font-weight: var(--fw-semi-bold); }
 .fw-bold { font-weight: var(--fw-bold); }
 
@@ -66,17 +62,7 @@
 .fs-secondary-h {font-size: var(--fs-secondary-h); }
 .fs-tertiary-h {font-size: var(--fs-tertiary-h); }
 
-.fs-300 {font-size: var(--fs-300); }
-.fs-400 {font-size: var(--fs-400); }
-.fs-500 {font-size: var(--fs-500); }
-.fs-600 {font-size: var(--fs-600); }
-.fs-700 {font-size: var(--fs-700); }
-.fs-800 {font-size: var(--fs-800); }
-.fs-900 {font-size: var(--fs-900); }
-
-/* backgrounds */
-.bg-black { background-color: var(--clr-black); }
-.bg-white { background-color: var(--clr-white); }
+/* background colors */
 .bg-primary { background-color: var(--clr-primary); }
 .bg-secondary { background-color: var(--clr-secondary); }
 .bg-tertiary { background-color: var(--clr-tertiary); }
@@ -84,52 +70,16 @@
 .bg-secondary10 { background-color: var(--clr-secondary10); }
 .bg-tertiary10 { background-color: var(--clr-tertiary10); }
 
-/* spacings */
-
 /* margins */
 .margin-block-50 { margin-block: var(--size-50) }
 .margin-block-100 { margin-block: var(--size-100) }
-.margin-block-150 { margin-block: var(--size-150) }
 .margin-block-200 { margin-block: var(--size-200) }
-.margin-block-250 { margin-block: var(--size-250) }
-.margin-block-300 { margin-block: var(--size-300) }
-.margin-block-350 { margin-block: var(--size-350) }
 .margin-block-400 { margin-block: var(--size-400) }
 
+/* GLOBAL */
 
-.margin-inline-50 { margin-inline: var(--size-50) }
-.margin-inline-100 { margin-inline: var(--size-100) }
-.margin-inline-150 { margin-inline: var(--size-150) }
-.margin-inline-200 { margin-inline: var(--size-200) }
-.margin-inline-250 { margin-inline: var(--size-250) }
-.margin-inline-300 { margin-inline: var(--size-300) }
-.margin-inline-350 { margin-inline: var(--size-350) }
-.margin-inline-400 { margin-inline: var(--size-400) }
-
-/* paddings */
-.padding-block-50 { padding-block: var(--size-50) }
-.padding-block-100 { padding-block: var(--size-100) }
-.padding-block-150 { padding-block: var(--size-150) }
-.padding-block-200 { padding-block: var(--size-200) }
-.padding-block-250 { padding-block: var(--size-250) }
-.padding-block-300 { padding-block: var(--size-300) }
-.padding-block-350 { padding-block: var(--size-350) }
-.padding-block-400 { padding-block: var(--size-400) }
-
-
-.padding-inline-50 { padding-inline: var(--size-50) }
-.padding-inline-100 { padding-inline: var(--size-100) }
-.padding-inline-150 { padding-inline: var(--size-150) }
-.padding-inline-200 { padding-inline: var(--size-200) }
-.padding-inline-250 { padding-inline: var(--size-250) }
-.padding-inline-300 { padding-inline: var(--size-300) }
-.padding-inline-350 { padding-inline: var(--size-350) }
-.padding-inline-400 { padding-inline: var(--size-400) }
-
-.even-columns {
-    display: grid;
-    gap: 2rem;
-}
+/* Default styles are applying to mobile view according to the mobile-first-principle.
+Changes for larger/wider screens is done in media queries */
 
 * {
     margin: 0;
@@ -138,7 +88,7 @@
 
 body {
     font-size: var(--fs-body);
-    font-family: var(--ff-body);
+    font-family: var(--ff-primary);
     color: var(--clr-black);
     height: 100%;
 }
@@ -147,7 +97,6 @@ h1, h2, h3, button, a, p {
     margin: 0;
     padding: 0;
 }
-
 
 header, footer {
     margin: 0;
@@ -158,6 +107,37 @@ header, footer {
     padding: var(--size-100);
 }
 
+.even-columns {
+    display: grid;
+    gap: 2rem;
+}
+
+.desktop-nav, label, .display-card p, .display-card a {
+    display: none;
+}
+
+.display-card:hover, button:hover, .event-card:hover {
+    box-shadow: 5px 5px 5px var(--clr-black50);
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 2em;
+    box-shadow: 2px 2px 2px var(--clr-black50);
+    transition: 0.3s;
+}
+
+/* HEADER */
+
+/* navigation */
+
+.logo {
+    width: 10em;
+}
+
 .top-nav {
     display: grid;
     grid-auto-flow: column;
@@ -165,27 +145,15 @@ header, footer {
     justify-content: space-between;
 }
 
-.top-nav a, .mobile-nav a {
+nav a {
     text-decoration: none;
 }
 
-.top-nav a:hover, .mobile-nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-.desktop-nav, label, .display-card p, .display-card a {
-    display: none;
-}
-
-.logo {
-    width: 10em;
-}
-
-.header-info {
-    display: flex;
-    justify-content: start;
-    gap: 1rem;
-}
+/* header showcase */
 
 header {
     position: relative;
@@ -196,6 +164,17 @@ header h1 {
     max-width: 8em;
 }
 
+.header-info {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+/* background */
+
+/* The background image is not present in the html as it is primary for decoration 
+It does NOT follow the DRY-principles, but this was the best i could do. */
+
 .home::before {
     content: '';
     position: absolute;
@@ -205,6 +184,7 @@ header h1 {
     opacity: 0.4;
     background-size: cover;
     aspect-ratio: 1/1;
+    background-position: center;
 }
 
 .visit::before {
@@ -263,6 +243,10 @@ header h1 {
     background-position: center;
 }
 
+/* MAIN */
+
+/* home and exhibition-cards */
+
 .display-info {
     display: grid;
     justify-content: space-between;
@@ -299,10 +283,40 @@ header h1 {
     border-radius: 50%;
 }
 
-.display-card:hover, button:hover, .event-card:hover {
-    box-shadow: 5px 5px 5px var(--clr-black50);
-    cursor: pointer;
+/* event card */
+
+.event-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: flex-start;
+    height: 32em;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px var(--clr-black50);
+    transition: 0.3s;
 }
+
+.event-card img {
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.event-card i {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-60%);
+    border-radius: 50%;
+    display: grid;
+}
+
+/* HOME - numbers container */
 
 .numbers-container {
     display: grid;
@@ -312,6 +326,46 @@ header h1 {
     justify-content: space-evenly;
     padding: var(--size-100);
 }
+
+/* EXHIBITIONS - customer reviews */
+
+.customer-reviews {
+    margin-top: var(--size-200);
+}
+
+.customer-reviews img {
+    object-fit: cover;
+    transform: translateY(-60%);
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+
+.customer-reviews div {
+    transform: translateY(-60%);
+}
+
+/* VISIT */
+
+.visit-info, .customer-reviews {
+    text-align: center;
+    padding: var(--size-100);
+}
+
+.visit-info p {
+    width: 12em;
+    margin: auto;
+}
+
+/* GET INVOLVED */
+
+.get-involved-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
 
 .social-links {
     display: grid;
@@ -347,83 +401,10 @@ input {
 
 input::placeholder {
     font-size: var(--fs-body);
-    color: #00000050;
+    color: var(--clr-black50);
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    height: 2em;
-    box-shadow: 2px 2px 2px var(--clr-black50);
-    transition: 0.3s;
-}
-
-.visit-info, .customer-reviews {
-    text-align: center;
-    padding: var(--size-100);
-}
-
-.visit-info p {
-    width: 12em;
-    margin: auto;
-}
-
-.customer-reviews {
-    margin-top: var(--size-200);
-}
-
-.customer-reviews img {
-    object-fit: cover;
-    transform: translateY(-60%);
-    width: 6em;
-    height: 6em;
-    border-radius: 50%;
-}
-
-.customer-reviews div {
-    transform: translateY(-60%);
-}
-
-.get-involved-content  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.event-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: flex-start;
-    height: 32em;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px var(--clr-black50);
-    transition: 0.3s;
-}
-
-.event-card img {
-    width: 100%;
-    height: 12em;
-    object-fit: cover;
-    border-radius: 5px 5px 0px 0px;
-}
-
-.event-card i {
-    width: 50px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-60%);
-    border-radius: 50%;
-    display: grid;
-}
-
-
-/* mobile nav */
+/* MOBILE NAV - SPECIAL */
 
 .mobile-nav nav {
     display: grid;
@@ -445,9 +426,9 @@ button {
 }
 
 @media (min-width: 800px) {
+    /* font size changes */
     :root {
         --fs-body: var(--fs-400);
-        --fs-button: var(--fs-600);
         --fs-primary-h: var(--fs-900);
         --fs-secondary-h: var(--fs-800);
         --fs-tertiary-h: var(--fs-600);

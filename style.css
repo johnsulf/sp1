@@ -113,6 +113,10 @@ h1, h2, h3, button, a, p {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 header, footer {
     margin: 0;
     padding: var(--size-100);
@@ -134,6 +138,7 @@ header, footer {
 .display-card:hover, .button:hover, .event-card:hover {
     box-shadow: var(--box-shadow-hover);
     cursor: pointer;
+    transform: scale(1.02);
 }
 
 .button {
@@ -161,10 +166,6 @@ header, footer {
     grid-auto-flow: column;
     grid-template-columns: auto;
     justify-content: space-between;
-}
-
-nav a, .button {
-    text-decoration: none;
 }
 
 nav a:hover {

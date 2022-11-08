@@ -44,6 +44,19 @@
     --size-300: 3rem;
     --size-350: 3.5rem;
     --size-400: 4rem;
+
+/* gradients */
+    --grd-primary-mobile: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%);
+    --grd-secondary-mobile: linear-gradient(180deg, var(--clr-secondary10) 10% 69%, var(--clr-secondary) 90% 100%);
+    --grd-tertiary-mobile: linear-gradient(180deg, var(--clr-tertiary10) 10% 69%, var(--clr-tertiary) 90% 100%);
+
+    --grd-primary-desk:  linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%);
+    --grd-secondary-desk: linear-gradient(90deg, var(--clr-secondary) 0 5%, var(--clr-secondary10) 30% 50%, var(--clr-secondary10) 50% 80%, var(--clr-secondary) 95% 100%);
+    --grd-tertiary-desk: linear-gradient(90deg, var(--clr-tertiary) 0 5%, var(--clr-tertiary10) 30% 50%, var(--clr-tertiary10) 50% 80%, var(--clr-tertiary) 95% 100%);
+
+/* box-shadow */
+    --box-shadow: 2px 2px 2px var(--clr-black50);
+    --box-shadow-hover: 5px 5px 5px var(--clr-black50);
 }
 
 /* UTILITY CLASSES */
@@ -117,7 +130,7 @@ header, footer {
 }
 
 .display-card:hover, button:hover, .event-card:hover {
-    box-shadow: 5px 5px 5px var(--clr-black50);
+    box-shadow: var(--box-shadow-hover);
     cursor: pointer;
 }
 
@@ -126,7 +139,7 @@ button {
     border-radius: 5px;
     width: 100%;
     height: 2em;
-    box-shadow: 2px 2px 2px var(--clr-black50);
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
 }
 
@@ -170,88 +183,49 @@ header h1 {
     gap: 1rem;
 }
 
-/* background */
+/* header background */
 
-/* The background image is not present in the html as it is primary for decoration 
-It does NOT follow the DRY-principles, but this was the best i could do. */
+/* The background image is not present in the html as it is primary for decoration. */
 
-.home::before {
+header::before {
     content: '';
     position: absolute;
     z-index: -1;
     inset: 0;
-    background-image: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%), url(images/vr.jpg);
     opacity: 0.4;
     background-size: cover;
     aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
     background-position: center;
+}
+
+/* different images per page. Some repetition here... */
+
+.home::before {
+    background-image: var(--grd-primary-mobile), url(images/vr.jpg);
+    height: 69%;
 }
 
 .visit::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background-image: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%), url(images/museum.jpg);
-    opacity: 0.4;
-    background-size: cover;
-    aspect-ratio: 1/1;
-    height: 100%;
-    width: 100%;
-    background-position: center;
+    background-image: var(--grd-primary-mobile), url(images/museum.jpg);
 }
 
 .exhibitions::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background-image: linear-gradient(180deg, var(--clr-secondary10) 10% 69%, var(--clr-secondary) 90% 100%), url(images/scientific.jpg);
-    opacity: 0.4;
-    background-size: cover;
-    aspect-ratio: 1/1;
-    height: 100%;
-    width: 100%;
-    background-position: center;
+    background-image: var(--grd-secondary-mobile), url(images/scientific.jpg);
 }
 
 .get-involved::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background-image: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%), url(images/whale2.jpg);
-    opacity: 0.4;
-    background-size: cover;
-    aspect-ratio: 1/1;
-    height: 100%;
-    width: 100%;
-    background-position: center;
+    background-image: var(--grd-primary-mobile), url(images/empty_room.jpg);
 }
 
 .events::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background-image: linear-gradient(180deg, var(--clr-tertiary10) 10% 69%, var(--clr-tertiary) 90% 100%), url(images/girl_math.jpg);
-    opacity: 0.4;
-    background-size: cover;
-    aspect-ratio: 1/1;
-    height: 100%;
-    width: 100%;
-    background-position: center;
+    background-image: var(--grd-tertiary-mobile), url(images/girl_math.jpg);
 }
 
 /* MAIN */
 
 /* home and exhibition-cards */
-
-.display-info {
-    display: grid;
-    justify-content: space-between;
-    width: 100%;
-}
 
 .display-card {
     display: grid;
@@ -259,7 +233,7 @@ It does NOT follow the DRY-principles, but this was the best i could do. */
     align-items: center;
     height: 5em;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px var(--clr-black50);
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
 }
 
@@ -267,13 +241,11 @@ It does NOT follow the DRY-principles, but this was the best i could do. */
     width: 100%;
     height: 5em;
     object-fit: cover;
-    position: relative;
     border-radius: 5px 0px 0px 5px;
 }
 
 .display-card i {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -292,7 +264,7 @@ It does NOT follow the DRY-principles, but this was the best i could do. */
     height: 32em;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px var(--clr-black50);
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
 }
 
@@ -342,7 +314,7 @@ It does NOT follow the DRY-principles, but this was the best i could do. */
 }
 
 .customer-reviews div {
-    transform: translateY(-60%);
+    transform: translateY(-40%);
 }
 
 /* VISIT */
@@ -353,7 +325,7 @@ It does NOT follow the DRY-principles, but this was the best i could do. */
 }
 
 .visit-info p {
-    width: 12em;
+    width: 15em;
     margin: auto;
 }
 
@@ -405,6 +377,8 @@ input::placeholder {
 }
 
 /* MOBILE NAV - SPECIAL */
+/* Instead of doing the checkbox-hack, I made a seperate page. I am fully aware that this is not
+how mobile menus are made, but I feel the checkbox hack messes up my code - unneccesary */
 
 .mobile-nav nav {
     display: grid;
@@ -425,7 +399,10 @@ input::placeholder {
     flex: 1;
 }
 
+/* MEDIAQUIERY */
+
 @media (min-width: 800px) {
+
     /* font size changes */
     :root {
         --fs-body: var(--fs-400);
@@ -434,19 +411,25 @@ input::placeholder {
         --fs-tertiary-h: var(--fs-600);
     }
     
+    /* GLOBAL */
+
     .container {
         max-width: 1100px;
         margin: auto;
-    }
-
-    .reverse {
-        order: 1;
     }
 
     .even-columns {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
+
+    .reverse {
+        order: 1;
+    }
+
+    /* HEADER */
+
+    /* navigation */
     .top-nav {
         grid-template-columns: 1fr 1fr;
     }
@@ -461,12 +444,12 @@ input::placeholder {
         display: none;
     }
 
+    /* showcase */
     .header-info-container {
         display: flex;
         justify-content: end;
         max-width: 1000px;
         margin: auto;
-
     }
 
     .header-info-flex {
@@ -474,50 +457,46 @@ input::placeholder {
         grid-template-columns: 1fr;
     }
 
-    .display-card p, .display-card a {
-        display: block;
+    /* background */
+    header::before {
+        margin: auto;
+        height: 100%;
+        width: 50%;
     }
 
     .home::before {
-        background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/vr.jpg);
-        margin: auto;
+        background-image: var(--grd-primary-desk), url(images/vr.jpg);
         height: 100%;
     }
 
     .visit::before {
-        background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/museum.jpg);
-        height: 100%;
-        width: 50%;
-        margin: auto;
-    }
-
-    .exhibitions::before {
-        background-image: linear-gradient(90deg, var(--clr-secondary) 0 5%, var(--clr-secondary10) 30% 50%, var(--clr-secondary10) 50% 80%, var(--clr-secondary) 95% 100%), url(images/scientific.jpg);
-        height: 100%;
-        width: 50%;
-        margin: auto;
+        background-image: var(--grd-primary-desk), url(images/museum.jpg);
     }
 
     .get-involved::before {
-        background-image: linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%), url(images/whale2.jpg);
-        height: 100%;
-        width: 40%;
-        margin: auto;
+        background-image: var(--grd-primary-desk), url(images/empty_room.jpg);
+    }
+
+    .exhibitions::before {
+        background-image: var(--grd-secondary-desk), url(images/scientific.jpg);
     }
 
     .events::before {
-        background-image: linear-gradient(90deg, var(--clr-tertiary) 0 5%, var(--clr-tertiary10) 30% 50%, var(--clr-tertiary10) 50% 80%, var(--clr-tertiary) 95% 100%), url(images/girl_math.jpg);
-        height: 100%;
-        width: 60%;
-        margin: auto;
+        background-image: var(--grd-tertiary-desk), url(images/girl_math.jpg);
     }
 
+    /* MAIN */
+
+    /* display */
     .display-info {
         text-align: center;
     }
 
+    .display-card p, .display-card a {
+        display: block;
+    }
+
     .display-card {
-        display: grid;
         grid-template-columns: 1fr;
         align-content: flex-start;
         height: 22em;
@@ -526,23 +505,26 @@ input::placeholder {
 
     .display-card img {
         height: 8em;
-        object-fit: cover;
         border-radius: 5px 5px 0px 0px;
     }
     
     .display-card i {
+        transform: translateY(-60%);
         width: 50px;
         height: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        transform: translateY(-60%);
-        border-radius: 50%;
-        display: grid;
     }
-
+    
     .display-card i:last-of-type {
         display: none;
     }
+
+    /* visit */
+    .visit-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr
+    }
+
+    /* FOOTER */
 
     .social-links {
         margin-top: 0;
@@ -551,10 +533,5 @@ input::placeholder {
     .footer-flex {
         display: grid;
         grid-auto-flow: column;
-    }
-
-    .visit-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr
     }
 }

@@ -151,7 +151,7 @@ button {
 /* navigation */
 
 .logo {
-    width: 150px;
+    width: 10em;
     height: auto;
 }
 
@@ -434,10 +434,6 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     /* HEADER */
 
     /* navigation */
-    .logo {
-        width: 200px;
-    }
-
     .top-nav {
         grid-template-columns: 1fr 1fr;
     }

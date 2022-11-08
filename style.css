@@ -152,6 +152,7 @@ button {
 
 .logo {
     width: 10em;
+    height: auto;
 }
 
 .top-nav {

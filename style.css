@@ -91,9 +91,6 @@
 
 /* paddings */
 .padding-block-50 { padding-block: var(--size-50) }
-.padding-block-100 { padding-block: var(--size-100) }
-.padding-block-200 { padding-block: var(--size-200) }
-.padding-block-400 { padding-block: var(--size-400) }
 
 /* GLOBAL */
 

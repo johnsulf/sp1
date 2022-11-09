@@ -141,6 +141,10 @@ header, footer {
     transform: scale(1.02);
 }
 
+nav a:hover, .display-card a:hover, .event-card a:hover {
+    text-decoration: underline;
+}
+
 .button {
     display: block;
     border-radius: 5px;
@@ -166,10 +170,6 @@ header, footer {
     grid-auto-flow: column;
     grid-template-columns: auto;
     justify-content: space-between;
-}
-
-nav a:hover, .display-card a:hover, .event-card a:hover {
-    text-decoration: underline;
 }
 
 /* header showcase */
@@ -238,6 +238,7 @@ header::before {
     align-items: center;
     height: 5em;
     border-radius: 5px;
+    overflow: overlay;
     box-shadow: var(--box-shadow);
     transition: 0.3s;
 }
@@ -266,16 +267,17 @@ header::before {
     display: grid;
     grid-template-columns: 1fr;
     align-content: flex-start;
-    height: 32em;
+    height: 24em;
     text-align: center;
     border-radius: 5px;
+    overflow: overlay;
     box-shadow: var(--box-shadow);
     transition: 0.3s;
 }
 
 .event-card img {
     width: 100%;
-    height: 12em;
+    height: 10em;
     object-fit: cover;
     border-radius: 5px 5px 0px 0px;
 }
@@ -521,6 +523,16 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     
     .display-card i:last-of-type {
         display: none;
+    }
+
+    /* event card */
+    
+    .event-card {
+        height: 29em;
+    }
+    
+    .event-card img {
+        height: 12em;
     }
 
     /* visit */

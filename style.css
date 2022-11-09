@@ -168,7 +168,7 @@ header, footer {
     justify-content: space-between;
 }
 
-nav a:hover {
+nav a:hover, .display-card a:hover, .event-card a:hover {
     text-decoration: underline;
 }
 

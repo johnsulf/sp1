@@ -203,6 +203,20 @@ header::before {
     height: 100%;
     width: 100%;
     background-position: center;
+    animation: fadein 3s 1;
+}
+
+/* Animation that makes the header image appear with a fade */
+@keyframes fadein {
+    0% {
+        opacity: 0.01;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
 }
 
 /* different images per page. Some repetition here... */

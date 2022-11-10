@@ -141,7 +141,7 @@ header, footer {
     transform: scale(1.02);
 }
 
-nav a:hover, .display-card a:hover, .event-card a:hover {
+nav a:hover, .explore-link:hover {
     text-decoration: underline;
 }
 
@@ -295,6 +295,14 @@ header::before {
     display: grid;
 }
 
+.explore-link {
+    transition: 0.5s;
+}
+
+.display-card:hover .explore-link, .event-card:hover .explore-link {
+    font-size: var(--fs-500);
+}
+
 /* HOME - numbers container */
 
 .numbers-container {
@@ -325,15 +333,16 @@ header::before {
 }
 
 /* VISIT */
+.visit-container {
+    display: grid;
+    gap: var(--size-100);
+    max-width: 20em;
+    margin: auto;
+}
 
 .visit-info, .customer-reviews {
     text-align: center;
     padding: var(--size-100);
-}
-
-.visit-info p {
-    width: 15em;
-    margin: auto;
 }
 
 /* GET INVOLVED */
@@ -447,6 +456,12 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         grid-column: 1/3;
         text-align: center;
     }
+
+    /* visit */
+    .visit-container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 40em;
+    }
 }
 
 @media (min-width: 800px) {
@@ -540,30 +555,8 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         text-align: center;
     }
 
-    .display-card p, .display-card a {
-        display: block;
-    }
-
-    .display-card {
-        grid-template-columns: 1fr;
-        align-content: flex-start;
-        height: 22em;
-        text-align: center;
-    }
-
-    .display-card img {
-        height: 8em;
-        border-radius: 5px 5px 0px 0px;
-    }
-    
-    .display-card i {
-        transform: translateY(-60%);
-        width: 50px;
-        height: 50px;
-    }
-    
-    .display-card i:last-of-type {
-        display: none;
+    .display-card:hover .explore-link, .event-card:hover .explore-link {
+        font-size: var(--fs-600);
     }
 
     /* event card */
@@ -578,8 +571,7 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
 
     /* visit */
     .visit-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     /* FOOTER */

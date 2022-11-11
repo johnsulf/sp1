@@ -1,100 +1,5 @@
-/* VARIABLES */
-
-:root {
-    /* colors */
-        --clr-primary: #FDD700;
-        --clr-secondary: #0000C8;
-        --clr-tertiary: #C5003C;
-    
-        --clr-primary10: #fdd70010;
-        --clr-secondary10: #0000C810;
-        --clr-tertiary10: #C5003C10;
-    
-        --clr-background: #FAFAFA;
-        --clr-white: #fff;
-        --clr-black: #000;
-        --clr-black50: #00000050;
-        --clr-black10: #00000010;
-    
-    /* typography */
-        --ff-primary: 'Quicksand', sans-serif;
-    
-        --fw-semi-bold: 600;
-        --fw-bold: 700;
-    
-        --fs-300: 1rem;
-        --fs-400: 1.25rem;
-        --fs-500: 1.5rem;
-        --fs-600: 2rem;
-        --fs-700: 2.25rem;
-        --fs-800: 3rem;
-        --fs-900: 4.5rem;
-    
-        --fs-body: var(--fs-300);
-        --fs-primary-h: var(--fs-800);
-        --fs-secondary-h: var(--fs-700);
-        --fs-tertiary-h: var(--fs-500);
-    
-    /* sizes */
-        --size-50: .5rem;
-        --size-100: 1rem;
-        --size-150: 1.5rem;
-        --size-200: 2rem;
-        --size-250: 2.5rem;
-        --size-300: 3rem;
-        --size-350: 3.5rem;
-        --size-400: 4rem;
-    
-    /* gradients */
-        --grd-primary-mobile: linear-gradient(180deg, var(--clr-primary10) 10% 69%, var(--clr-primary) 90% 100%);
-        --grd-secondary-mobile: linear-gradient(180deg, var(--clr-secondary10) 10% 69%, var(--clr-secondary) 90% 100%);
-        --grd-tertiary-mobile: linear-gradient(180deg, var(--clr-tertiary10) 10% 69%, var(--clr-tertiary) 90% 100%);
-    
-        --grd-primary-desk:  linear-gradient(90deg, var(--clr-primary) 0 5%, var(--clr-primary10) 30% 50%, var(--clr-primary10) 50% 80%, var(--clr-primary) 95% 100%);
-        --grd-secondary-desk: linear-gradient(90deg, var(--clr-secondary) 0 5%, var(--clr-secondary10) 30% 50%, var(--clr-secondary10) 50% 80%, var(--clr-secondary) 95% 100%);
-        --grd-tertiary-desk: linear-gradient(90deg, var(--clr-tertiary) 0 5%, var(--clr-tertiary10) 30% 50%, var(--clr-tertiary10) 50% 80%, var(--clr-tertiary) 95% 100%);
-    
-    /* box-shadow */
-        --box-shadow: 2px 2px 2px var(--clr-black50);
-        --box-shadow-hover: 5px 5px 5px var(--clr-black50);
-
-    /* duration */
-        --dur-default: 0.3s;
-
-    /* border-radius */
-        --radius-default: 5px;
-        --radius-circle: 50%;
-    }
-/* CONSTANTS */
-
-/* text */
-.text-white { color: var(--clr-white); }
-.text-black { color: var(--clr-black); }
-.text-primary { color: var(--clr-primary); }
-.text-secondary { color: var(--clr-secondary); }
-.text-tertiary { color: var(--clr-tertiary); }
-
-.fw-semi-bold { font-weight: var(--fw-semi-bold); }
-.fw-bold { font-weight: var(--fw-bold); }
-
-.fs-body {font-size: var(--fs-body); }
-.fs-primary-h {font-size: var(--fs-primary-h); }
-.fs-secondary-h {font-size: var(--fs-secondary-h); }
-.fs-tertiary-h {font-size: var(--fs-tertiary-h); }
-
-/* background colors */
-.bg-primary { background-color: var(--clr-primary); }
-.bg-secondary { background-color: var(--clr-secondary); }
-.bg-tertiary { background-color: var(--clr-tertiary); }
-.bg-primary10 { background-color: var(--clr-primary10); }
-.bg-secondary10 { background-color: var(--clr-secondary10); }
-.bg-tertiary10 { background-color: var(--clr-tertiary10); }
-
-/* margins */
-.margin-block-50 { margin-block: var(--size-50) }
-.margin-block-100 { margin-block: var(--size-100) }
-.margin-block-200 { margin-block: var(--size-200) }
-.margin-block-400 { margin-block: var(--size-400) }
+@import url(/styles/imports/variables.css);
+@import url(/styles/imports/constants.css);
 
 /* GLOBAL */
 
@@ -238,24 +143,24 @@ header::before {
 /* different images per page. Some repetition here... */
 
 .home::before {
-    background-image: var(--grd-primary-mobile), url(images/vr.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/vr.jpg);
     height: 69%;
 }
 
 .visit::before {
-    background-image: var(--grd-primary-mobile), url(images/museum.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/museum.jpg);
 }
 
 .exhibitions::before {
-    background-image: var(--grd-secondary-mobile), url(images/scientific.jpg);
+    background-image: var(--grd-secondary-mobile), url(/images/scientific.jpg);
 }
 
 .get-involved::before {
-    background-image: var(--grd-primary-mobile), url(images/empty_room.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/empty_room.jpg);
 }
 
 .events::before {
-    background-image: var(--grd-tertiary-mobile), url(images/girl_math.jpg);
+    background-image: var(--grd-tertiary-mobile), url(/images/girl_math.jpg);
 }
 
 /* MAIN */
@@ -560,24 +465,24 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     }
 
     .home::before {
-        background-image: var(--grd-primary-desk), url(images/vr.jpg);
+        background-image: var(--grd-primary-desk), url(/images/vr.jpg);
         height: 100%;
     }
 
     .visit::before {
-        background-image: var(--grd-primary-desk), url(images/museum.jpg);
+        background-image: var(--grd-primary-desk), url(/images/museum.jpg);
     }
 
     .get-involved::before {
-        background-image: var(--grd-primary-desk), url(images/empty_room.jpg);
+        background-image: var(--grd-primary-desk), url(/images/empty_room.jpg);
     }
 
     .exhibitions::before {
-        background-image: var(--grd-secondary-desk), url(images/scientific.jpg);
+        background-image: var(--grd-secondary-desk), url(/images/scientific.jpg);
     }
 
     .events::before {
-        background-image: var(--grd-tertiary-desk), url(images/girl_math.jpg);
+        background-image: var(--grd-tertiary-desk), url(/images/girl_math.jpg);
     }
 
     /* MAIN */

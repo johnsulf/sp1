@@ -4,7 +4,7 @@
 /* GLOBAL */
 
 /* Default styles are applying to mobile view according to the mobile-first-principle.
-Changes for larger/wider screens is done in media queries */
+Changes for medium/large screens is done in media queries */
 
 * {
     margin: 0;
@@ -349,9 +349,19 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     flex: 1;
 }
 
-/* MEDIAQUIERY */
 
-@media (min-width: 550px) {
+/* MEDIAQUIERIES */
+
+/* defaults for medium and larger screens */
+@media (min-width: 600px) {
+
+    /* font size changes */
+    :root {
+        --fs-body: var(--fs-400);
+        --fs-primary-h: var(--fs-900);
+        --fs-secondary-h: var(--fs-800);
+        --fs-tertiary-h: var(--fs-600);
+    }
 
     .card_display p, .card_display a {
         display: block;
@@ -385,7 +395,8 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
 
 }
 
-@media (min-width: 550px) and (max-width: 799px) {
+/* only medium-sized screens */
+@media (min-width: 600px) and (max-width: 879px) {
     .even-columns {
         grid-template-columns: 1fr 1fr;
     }
@@ -401,15 +412,8 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     }
 }
 
-@media (min-width: 800px) {
-
-    /* font size changes */
-    :root {
-        --fs-body: var(--fs-400);
-        --fs-primary-h: var(--fs-900);
-        --fs-secondary-h: var(--fs-800);
-        --fs-tertiary-h: var(--fs-600);
-    }
+/* only larger screens */
+@media (min-width: 880px) {
     
     /* GLOBAL */
 

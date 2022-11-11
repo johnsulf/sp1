@@ -1,5 +1,7 @@
 /* CONSTANTS */
 
+@import url(/styles/imports/variables.css);
+
 /* text */
 .text-white { color: var(--clr-white); }
 .text-black { color: var(--clr-black); }

@@ -88,9 +88,6 @@
 .margin-block-200 { margin-block: var(--size-200) }
 .margin-block-400 { margin-block: var(--size-400) }
 
-/* paddings */
-.padding-block-50 { padding-block: var(--size-50) }
-
 /* GLOBAL */
 
 /* Default styles are applying to mobile view according to the mobile-first-principle.
@@ -170,6 +167,10 @@ nav a:hover, .explore-link:hover {
     grid-auto-flow: column;
     grid-template-columns: auto;
     justify-content: space-between;
+}
+
+nav a {
+    padding: var(--size-50);
 }
 
 /* header showcase */
@@ -385,7 +386,7 @@ header::before {
     border-radius: 50%;
 }
 
-.footer-nav {
+.footer-nav a {
     display: grid;
 }
 

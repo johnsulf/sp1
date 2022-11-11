@@ -285,11 +285,11 @@ header::before {
 
 .card:hover .explore-link {
     font-size: var(--fs-400);
-    padding: var(--size-50);
     background-color: var(--clr-black10);
 }
 
 .explore-link {
+    padding: var(--size-100);
     transition: 0.5s;
 }
 

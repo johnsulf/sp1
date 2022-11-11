@@ -51,7 +51,7 @@ header, footer {
     transform: scale(1.02);
 }
 
-a:hover:not(.button) {
+a:hover:not(.button, .social-links a) {
     text-decoration: underline;
 }
 
@@ -71,7 +71,7 @@ nav a {
     transition: var(--dur-default);
 }
 
-nav a:hover {
+nav a:hover:not(.mobile-nav_link) {
     background-color: var(--clr-black10);
     border-radius: var(--radius-default);
     transform: scale(1.1);

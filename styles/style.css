@@ -143,24 +143,24 @@ header::before {
 /* different images per page. Some repetition here... */
 
 .home::before {
-    background-image: var(--grd-primary-mobile), url(/images/vr.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/backgrounds/vr.jpg);
     height: 69%;
 }
 
 .visit::before {
-    background-image: var(--grd-primary-mobile), url(/images/museum.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/backgrounds/museum.jpg);
 }
 
 .exhibitions::before {
-    background-image: var(--grd-secondary-mobile), url(/images/scientific.jpg);
+    background-image: var(--grd-secondary-mobile), url(/images/backgrounds/scientific.jpg);
 }
 
 .get-involved::before {
-    background-image: var(--grd-primary-mobile), url(/images/empty_room.jpg);
+    background-image: var(--grd-primary-mobile), url(/images/backgrounds/empty_room.jpg);
 }
 
 .events::before {
-    background-image: var(--grd-tertiary-mobile), url(/images/girl_math.jpg);
+    background-image: var(--grd-tertiary-mobile), url(/images/backgrounds/girl_math.jpg);
 }
 
 /* MAIN */
@@ -282,7 +282,7 @@ header::before {
 
 .get-involved-content img {
     width: 100%;
-    height: 100%;
+    height: 20em;
     object-fit: cover;
 }
 
@@ -469,24 +469,24 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     }
 
     .home::before {
-        background-image: var(--grd-primary-desk), url(/images/vr.jpg);
+        background-image: var(--grd-primary-desk), url(/images/backgrounds/vr.jpg);
         height: 100%;
     }
 
     .visit::before {
-        background-image: var(--grd-primary-desk), url(/images/museum.jpg);
+        background-image: var(--grd-primary-desk), url(/images/backgrounds/museum.jpg);
     }
 
     .get-involved::before {
-        background-image: var(--grd-primary-desk), url(/images/empty_room.jpg);
+        background-image: var(--grd-primary-desk), url(/images/backgrounds/empty_room.jpg);
     }
 
     .exhibitions::before {
-        background-image: var(--grd-secondary-desk), url(/images/scientific.jpg);
+        background-image: var(--grd-secondary-desk), url(/images/backgrounds/scientific.jpg);
     }
 
     .events::before {
-        background-image: var(--grd-tertiary-desk), url(/images/girl_math.jpg);
+        background-image: var(--grd-tertiary-desk), url(/images/backgrounds/girl_math.jpg);
     }
 
     /* MAIN */

@@ -18,7 +18,7 @@ body {
     height: 100%;
 }
 
-h1, h2, h3, button, a, p {
+h1, h2, h3, cta, a, p {
     margin: 0;
     padding: 0;
 }
@@ -45,22 +45,31 @@ header, footer {
     display: none;
 }
 
-.card_display:hover, .button:hover, .card_event:hover {
+.card_display:hover, .cta:hover, .card_event:hover, button:hover {
     box-shadow: var(--box-shadow-hover);
     cursor: pointer;
     transform: scale(1.02);
 }
 
-a:hover:not(.button, .social-links a) {
+a:hover:not(.cta, .social-links a) {
     text-decoration: underline;
 }
 
-.button {
-    display: block;
+button {
+    text-decoration: none;
+    border: none;
     border-radius: var(--radius-default);
+    padding: var(--size-50);
+    box-shadow: var(--box-shadow);
+    transition: var(--dur-default);
+}
+
+.cta {
+    display: block;
     text-align: center;
-    font-weight: var(--fw-semi-bold);
     align-content: center;
+    border-radius: var(--radius-default);
+    font-weight: var(--fw-semi-bold);
     padding: var(--size-50);
     box-shadow: var(--box-shadow);
     transition: var(--dur-default);
@@ -190,7 +199,6 @@ header::before {
 
 .card:hover .explore-link {
     font-size: var(--fs-400);
-    background-color: var(--clr-black10);
 }
 
 .explore-link {

@@ -41,7 +41,7 @@ header, footer {
     gap: var(--size-200);
 }
 
-.desktop-nav, label, .card_display p, .card_display a {
+.desktop-nav, label, .card_display p, .explore-link {
     display: none;
 }
 
@@ -51,7 +51,7 @@ header, footer {
     transform: scale(1.02);
 }
 
-a:hover:not(.cta, .social-links a) {
+a:hover:not(.cta, .social-links a, .card_display a:last-of-type) {
     text-decoration: underline;
 }
 
@@ -393,7 +393,7 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         height: 50px;
     }
     
-    .card_display i:last-of-type {
+    .card_display a:last-of-type {
         display: none;
     }
 

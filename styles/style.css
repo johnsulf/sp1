@@ -45,6 +45,10 @@ header, footer {
     display: none;
 }
 
+.card_event .explore-link {
+    display: block;
+}
+
 .card_display:hover, .cta:hover, .card_event:hover, button:hover {
     box-shadow: var(--box-shadow-hover);
     cursor: pointer;
@@ -178,7 +182,6 @@ header::before {
 
 .card {
     display: grid;
-    overflow: overlay;
     border-radius: var(--radius-default);
     box-shadow: var(--box-shadow);
     transition: var(--dur-default);
@@ -230,7 +233,7 @@ header::before {
     grid-template-columns: 1fr;
     align-content: flex-start;
     text-align: center;
-    height: 24em;
+    height: auto;
 }
 
 .card_event img {
@@ -371,14 +374,14 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         --fs-tertiary-h: var(--fs-600);
     }
 
-    .card_display p, .card_display a {
+    .card p, .card a, .explore-link {
         display: block;
     }
 
     .card_display {
         grid-template-columns: 1fr;
         align-content: flex-start;
-        height: 22em;
+        height: auto;
         text-align: center;
     }
 
@@ -399,6 +402,12 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
 
     .display-info {
         text-align: center;
+    }
+
+    /* display */
+
+    .card:hover .explore-link {
+        font-size: var(--fs-500);
     }
 
 }
@@ -498,22 +507,6 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
     }
 
     /* MAIN */
-
-    /* display */
-
-    .card:hover .explore-link {
-        font-size: var(--fs-500);
-    }
-
-    /* event card */
-    
-    .card_event {
-        height: 29em;
-    }
-    
-    .card_event img {
-        height: 12em;
-    }
 
     /* visit */
     .visit-container {

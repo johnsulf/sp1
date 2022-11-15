@@ -200,13 +200,8 @@ header::before {
     border-radius: var(--radius-circle);
 }
 
-.card:hover .explore-link {
-    font-size: var(--fs-400);
-}
-
 .explore-link {
     padding: var(--size-100);
-    transition: 0.5s;
 }
 
 /* cards - home and exhibition */
@@ -404,10 +399,8 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         text-align: center;
     }
 
-    /* display */
-
-    .card:hover .explore-link {
-        font-size: var(--fs-500);
+    .get-involved-content .reverse {
+        order: 1;
     }
 
 }

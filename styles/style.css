@@ -49,7 +49,7 @@ header, footer {
     display: block;
 }
 
-.card_display:hover, .cta:hover, .card_event:hover, button:hover {
+.card_display:hover, .cta:hover, .card_event:hover, button:hover, .social-links i:hover {
     box-shadow: var(--box-shadow-hover);
     cursor: pointer;
     transform: scale(1.02);
@@ -246,10 +246,8 @@ header::before {
 
 .numbers-container {
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
-    justify-content: space-evenly;
     padding: var(--size-100);
 }
 
@@ -308,6 +306,7 @@ header::before {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-circle);
+    box-shadow: var(--box-shadow);
 }
 
 .footer-nav a {

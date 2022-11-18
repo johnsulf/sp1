@@ -18,7 +18,7 @@ body {
     height: 100%;
 }
 
-h1, h2, h3, cta, a, p {
+h1, h2, h3, .cta, a, p {
     margin: 0;
     padding: 0;
 }
@@ -41,12 +41,8 @@ header, footer {
     gap: var(--size-200);
 }
 
-.desktop-nav, label, .card_display p, .explore-link {
+.desktop-nav, label, .card_display p {
     display: none;
-}
-
-.card_event .explore-link {
-    display: block;
 }
 
 .card_display:hover, .cta:hover, .card_event:hover, button:hover, .social-links i:hover {
@@ -55,7 +51,7 @@ header, footer {
     transform: scale(1.02);
 }
 
-a:hover:not(.cta, .social-links a, .card_display a:last-of-type) {
+a:hover:not(.cta, .social-links a, .card_display) {
     text-decoration: underline;
 }
 
@@ -198,10 +194,6 @@ header::before {
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-circle);
-}
-
-.explore-link {
-    padding: var(--size-100);
 }
 
 /* cards - home and exhibition */
@@ -368,7 +360,7 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         --fs-tertiary-h: var(--fs-600);
     }
 
-    .card p, .card a, .explore-link {
+    .card p {
         display: block;
     }
 
@@ -390,7 +382,7 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         height: 50px;
     }
     
-    .card_display a:last-of-type {
+    .card_display i:last-of-type {
         display: none;
     }
 

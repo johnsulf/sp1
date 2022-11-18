@@ -51,7 +51,7 @@ header, footer {
     transform: scale(1.02);
 }
 
-a:hover:not(.cta, .social-links a, .card_display) {
+a:hover:not(.cta, .social-links a, .card) {
     text-decoration: underline;
 }
 

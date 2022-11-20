@@ -41,7 +41,7 @@ header, footer {
     gap: var(--size-200);
 }
 
-.desktop-nav, label, .card_display p {
+.top-nav_items, label:not(.hamburger-menu), .card_display p {
     display: none;
 }
 
@@ -209,8 +209,8 @@ header::before {
 }
 
 .card_display i {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     transform: translateX(-50%);
 }
 
@@ -327,7 +327,7 @@ input::placeholder {
 /* Instead of doing the checkbox-hack, I made a seperate page. I am fully aware that this is not
 how mobile menus are made, but I feel the checkbox hack messes up my code - unneccesary */
 
-.mobile-nav nav {
+/* .mobile-nav nav {
     display: grid;
 }
 
@@ -344,8 +344,28 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
 
 .mobile-nav main {
     flex: 1;
-}
+} */
 
+#hamburger,
+#open,
+#hamburger:checked ~ #closed {display: none;}
+
+#hamburger:checked ~ #open {display: block;}
+
+#hamburger:checked ~ .top-nav_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    margin-right: var(--size-150);
+    top: 4em;
+    right: 0;
+    width: 8em;
+    height: 10em;
+    backdrop-filter: blur(5rem);
+    overflow: hidden;
+}
 
 /* MEDIAQUIERIES */
 

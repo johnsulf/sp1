@@ -102,6 +102,25 @@ nav a:hover:not(.mobile-nav_link) {
     justify-content: space-between;
 }
 
+#hamburger,
+#open,
+#hamburger:checked ~ #closed {display: none;}
+
+#hamburger:checked ~ #open {display: block;}
+
+#hamburger:checked ~ .top-nav_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 4em;
+    right: 0;
+    width: 8em;
+    height: 10em;
+    overflow: hidden;
+}
+
 /* header showcase */
 
 header {
@@ -323,50 +342,6 @@ input::placeholder {
     color: var(--clr-black50);
 }
 
-/* MOBILE NAV - SPECIAL */
-/* Instead of doing the checkbox-hack, I made a seperate page. I am fully aware that this is not
-how mobile menus are made, but I feel the checkbox hack messes up my code - unneccesary */
-
-/* .mobile-nav nav {
-    display: grid;
-}
-
-.mobile-nav {
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-nav header, .mobile-nav footer {
-    min-height: 50px;
-}
-
-.mobile-nav main {
-    flex: 1;
-} */
-
-#hamburger,
-#open,
-#hamburger:checked ~ #closed {display: none;}
-
-#hamburger:checked ~ #open {display: block;}
-
-#hamburger:checked ~ .top-nav_items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    position: absolute;
-    margin-right: var(--size-150);
-    top: 4em;
-    right: 0;
-    width: 8em;
-    height: 10em;
-    backdrop-filter: blur(5rem);
-    overflow: hidden;
-}
-
 /* MEDIAQUIERIES */
 
 /* defaults for medium and larger screens */
@@ -378,6 +353,10 @@ how mobile menus are made, but I feel the checkbox hack messes up my code - unne
         --fs-primary-h: var(--fs-900);
         --fs-secondary-h: var(--fs-800);
         --fs-tertiary-h: var(--fs-600);
+    }
+
+    .top-nav_items {
+        background: none;
     }
 
     .card p {

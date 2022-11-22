@@ -80,12 +80,6 @@ nav a {
     transition: var(--dur-default);
 }
 
-nav a:hover:not(.mobile-nav_link) {
-    background-color: var(--clr-black10);
-    border-radius: var(--radius-default);
-    transform: scale(1.1);
-}
-
 /* HEADER */
 
 /* navigation */
@@ -355,10 +349,6 @@ input::placeholder {
         --fs-tertiary-h: var(--fs-600);
     }
 
-    .top-nav_items {
-        background: none;
-    }
-
     .card p {
         display: block;
     }
@@ -442,6 +432,10 @@ input::placeholder {
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
+    }
+
+    .top-nav_items {
+        background: none;
     }
 
     .hamburger-menu {

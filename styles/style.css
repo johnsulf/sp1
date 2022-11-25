@@ -51,6 +51,10 @@ header, footer {
     transform: scale(1.02);
 }
 
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
 a:hover:not(.cta, .social-links a, .card) {
     text-decoration: underline;
 }
@@ -94,6 +98,12 @@ nav a {
     grid-auto-flow: column;
     grid-template-columns: auto;
     justify-content: space-between;
+}
+
+nav a:hover {
+    background-color: var(--clr-black10);
+    border-radius: var(--radius-default);
+    transform: scale(1.1);
 }
 
 #hamburger,

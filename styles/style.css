@@ -69,11 +69,6 @@ button {
     transition: var(--dur-default);
 }
 
-nav a {
-    padding: var(--size-50);
-    transition: var(--dur-default);
-}
-
 /* HEADER */
 
 /* navigation */
@@ -88,6 +83,11 @@ nav a {
     grid-auto-flow: column;
     grid-template-columns: auto;
     justify-content: space-between;
+}
+
+nav a {
+    padding: var(--size-50);
+    transition: var(--dur-default);
 }
 
 nav a:hover {
@@ -200,6 +200,7 @@ header::before {
 .card img {
     width: 100%;
     object-fit: cover;
+    transition: 0.6s;
 }
 
 .card i {

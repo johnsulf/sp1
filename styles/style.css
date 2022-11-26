@@ -45,10 +45,6 @@ a {
     cursor: pointer;
 }
 
-a:hover:not(.cta, .social-links a, .card) {
-    text-decoration: underline;
-}
-
 button {
     text-decoration: none;
     border: none;
@@ -114,6 +110,10 @@ nav a:hover {
     width: 8em;
     height: 10em;
     overflow: hidden;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 /* header showcase */

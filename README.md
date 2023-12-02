@@ -1,6 +1,6 @@
 # Community Science Museum - Semester Projcet 1
 
-![image] (https://erlendjohnsen.com/assets/images/csmuseum.jpg)
+![image] (https://erlendjohnsen.com/assets/images/csm.jpg)
 
 A simple overview of the use/purpose of the project.
 

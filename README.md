@@ -4,13 +4,13 @@
 
 ## Description
 The website for Community Science Museum is made as my Semester Project 1 submission for my studies at Noroff. The focus is on design, HTML and CSS. Hereunder designing for the relevant target group, writing semantic HTML and no repeating CSS. 
+Visit the website [here(https://csmuseum1.netlify.app/)]
 
 ### Key features
 
 - Fade in image in header: The header of each page features an image that is faded in.
-- Color theme: Strong colors were used for the young target group. Every page has its own primary color.
+- Color theme: Strong colors were used for the young target group. Every page has its primary color.
 - Cards: A fair amount of time were used on the cards used on most pages.
-- 
 
 ## Built With
 

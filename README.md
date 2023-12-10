@@ -4,7 +4,7 @@
 
 ## Description
 The website for Community Science Museum is made as my Semester Project 1 submission for my studies at Noroff. The focus is on design, HTML and CSS. Hereunder designing for the relevant target group, writing semantic HTML and no repeating CSS. 
-Visit the website [here(https://csmuseum1.netlify.app/)]
+Visit the website [here](https://csmuseum1.netlify.app/)
 
 ### Key features
 

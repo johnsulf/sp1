@@ -9,8 +9,8 @@ Visit the website [here](https://csmuseum1.netlify.app/)
 ### Key features
 
 - Fade in image in header: The header of each page features an image that is faded in.
-- Color theme: Strong colors were used for the young target group. Every page has its primary color.
-- Cards: A fair amount of time were used on the cards used on most pages.
+- Color theme: Strong colors are used for the young target group. Every page has its primary color.
+- Cards: The page features cards with images and icons for accessing content
 
 ## Built With
 
@@ -28,7 +28,7 @@ No external frameworks or libraries are used, emphasizing core web development s
 1. Clone the repo:
 Open a command window and navigate to destination you want to save the project to. Then run:
 ```bash
-git clone https://github.com/johnsulf/sp1-johnsulf.git
+git clone https://github.com/johnsulf/sp1.git
 ```
 
 ### Running

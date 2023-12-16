@@ -11,6 +11,7 @@ Visit the website [here](https://csmuseum1.netlify.app/)
 - Fade in image in header: The header of each page features an image that is faded in.
 - Color theme: Strong colors are used for the young target group. Every page has its primary color.
 - Cards: The page features cards with images and icons for accessing content
+- Mobile-first design: The website is primarily designed for mobile devices but is responsive and will look good on desktops/bigger screens as well.
 
 ## Built With
 
